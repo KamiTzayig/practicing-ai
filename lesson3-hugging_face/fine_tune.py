@@ -10,7 +10,7 @@ from utils import format_dataset, gen_prompt, generate_text
 
 MODEL_REPO_ID = 'meta-llama/Llama-3.2-1B-Instruct'
 DATASET_ID = "dvgodoy/yoda_sentences"
-NEW_MODEL_NAME = "llama-3.2-1b-yoda-adapter-cpu"
+NEW_MODEL_NAME = "llama-3.2-1b-yoda-adapter-cpu-v2"
 HF_HUB_MODEL_NAME = "phi3-mini-yoda-adapter" # Replace with your Hub username/model_name if you want to push
 
 def load_model_on_cpu(repo_id):
