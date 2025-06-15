@@ -228,7 +228,10 @@ class Gemma3Processor:
         
         # Initialize faster-whisper for speech-to-text
         logger.info("Loading faster-whisper model...")
-        self.whisper_model = WhisperModel("small", device="cpu")
+        # Use CUDA for Whisper if available, otherwise fallback to CPU
+        whisper_device = "cuda" if torch.cuda.is_available() else "cpu"
+        logger.info(f"Using device for Whisper: {whisper_device}")
+        self.whisper_model = WhisperModel("large-v3", device=whisper_device)
         logger.info("Faster-whisper model loaded")
         
         # Message history management
