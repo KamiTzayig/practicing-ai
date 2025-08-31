@@ -1,0 +1,16 @@
+{
+	"model": "qwen/qwen3-30b-a3b",
+	"provider": "nebius",
+	"servers": [
+		{
+			"type": "stdio",
+			"config": {
+				"command": "npx",
+				"args": [
+					"mcp-remote", 
+					"https://kamitzayig-mcp-weather.hf.space/gradio_api/mcp/sse"
+				]
+			}
+		}
+	]
+}
